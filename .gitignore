@@ -7,7 +7,8 @@
 *.dll
 *.so
 *.dylib
-
+./cmd/graphql-server/graphql-server
+./graphql-server
 # Test binary, built with `go test -c`
 *.test
 

@@ -12,6 +12,11 @@ tasks:
       - echo 'Generating GraphQL Schema'
       - go run github.com/99designs/gqlgen generate
       - echo 'Generated Schema. Please check ./cmd/go-graphql-starter/graph folder for any errors.'
+  run-graphql-server:
+    dir: cmd/graphql-server
+    cmds:
+      - go build -o graphql-server
+      - PORT=7777 ./graphql-server -configpath ./config/dev/config.yaml
   runtests:
     cmds:
       - (rm /tmp/unit_coverage.out || echo "Deleted Old files")

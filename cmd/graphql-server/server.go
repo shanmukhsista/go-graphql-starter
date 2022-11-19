@@ -22,7 +22,7 @@ const defaultPort = "8080"
 func main() {
 	port := GetPortFromEnv()
 	// get config file from go args -configpath
-	configPath := config.MustGetConfigPathFromFlags("configapth")
+	configPath := config.MustGetConfigPathFromFlags("configpath")
 	srv, err := SetupServer(configPath)
 	if err != nil {
 		log.Fatal().Err(err).Msgf("Unable to start server")
