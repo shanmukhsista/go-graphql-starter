@@ -1,0 +1,25 @@
+version: '3'
+env:
+  APP_ENV: dev
+tasks:
+  depsgen:
+    dir: cmd/graphql-server/dependencies
+    cmds:
+      - wire
+  gqlgen:
+    dir: cmd/graphql-server
+    cmds:
+      - echo 'Generating GraphQL Schema'
+      - go run github.com/99designs/gqlgen generate
+      - echo 'Generated Schema. Please check ./cmd/go-graphql-starter/graph folder for any errors.'
+  runtests:
+    cmds:
+      - (rm /tmp/unit_coverage.out || echo "Deleted Old files")
+      - go test -mod=mod -v  -coverprofile  /tmp/unit_coverage.out ./...
+  setupdev:
+    cmds:
+      - echo "Installing Wire for Compile Time Dependency Injection."
+      - go install github.com/google/wire/cmd/wire@latest
+  newmigration:
+    cmds:
+      - migrate create -ext sql -dir db/migrations -seq

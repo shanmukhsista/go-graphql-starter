@@ -1,0 +1,4 @@
+{
+  "errorFetchingAllNodes": "Unable to fetch all notes. An error occurred.",
+  "errorUnknownWhileSavingNewNote" : "An unknown error occurred while saving a new note."
+}
