@@ -1,4 +1,3 @@
-create database notesapp ;
 
 create table notes (
     id varchar(64) primary key ,

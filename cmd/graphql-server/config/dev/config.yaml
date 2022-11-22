@@ -4,4 +4,4 @@ server:
       - localhost:8080
 db:
   postgres:
-    url: postgres://test:test@localhost:55033/notesapp
+    url: postgres://test:test@localhost:5435/notesdb

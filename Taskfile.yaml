@@ -12,6 +12,11 @@ tasks:
       - echo 'Generating GraphQL Schema'
       - go run github.com/99designs/gqlgen generate
       - echo 'Generated Schema. Please check ./cmd/go-graphql-starter/graph folder for any errors.'
+  migratedb:
+    env:
+      DATABASE_URL: '{{.DATABASE_URL | default "pgx://test:test@localhost:5435/notesdb"}}'
+    cmds:
+      - migrate -source file://migrations -database $DATABASE_URL  up
   run-graphql-server:
     dir: cmd/graphql-server
     cmds:

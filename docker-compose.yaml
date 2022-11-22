@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=notesdb
+    ports:
+      - '5435:5432'
+    volumes:
+      - .localdb:/var/lib/postgresql/data
+volumes:
+  .localdb:
+    driver: local

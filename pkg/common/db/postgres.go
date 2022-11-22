@@ -144,6 +144,10 @@ func ProvidePgConnectionPool() (*pgxpool.Pool, error) {
 	if err != nil {
 		return nil, err
 	}
+	err = conn.Ping(context.Background())
+	if err != nil {
+		log.Fatal().Err(err).Msgf("Error connecting to the database. ")
+	}
 	return conn, nil
 }
 
