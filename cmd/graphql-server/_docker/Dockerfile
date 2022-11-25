@@ -24,8 +24,6 @@ ARG ENV
 # Copy our static executable.
 RUN apk update && apk add --no-cache  vips-dev
 COPY --from=builder /go/bin/graphql-server /go/bin/graphql-server
-COPY --from=builder /src/go-graphql-starter/graphql-server/config/$ENV/graphql-server.yaml /go/bin/
-COPY --from=builder /src/go-graphql-starter/graphql-server/pkg/lib/errorMessages.json /etc/
-COPY --from=builder /src/go-graphql-starter/graphql-server/emoji_search.bleve /go/bin/emoji_search.bleve
+COPY --from=builder /src/go-graphql-starter/graphql-server/cmd/graphql-server/config/$ENV/config.yaml /go/bin/
 # Run the hello binary.
-ENTRYPOINT ["/go/bin/graphql-server",  "-configpath=/go/bin/graphql-server.yaml"]
+ENTRYPOINT ["/go/bin/graphql-server",  "-configpath=/go/bin/config.yaml"]

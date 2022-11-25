@@ -24,7 +24,7 @@ tasks:
       - PORT=7777 ./graphql-server -configpath ./config/dev/config.yaml
   dockerize:
     cmds:
-      - docker build -t dockerhub.com/go-graphql-starter/graphql-server:latest -f cmd/graphql-server/_docker/Dockerfile .
+      - docker build -t dockerhub.com/go-graphql-starter/graphql-server:latest --build-arg ENV=stage -f cmd/graphql-server/_docker/Dockerfile .
   runtests:
     cmds:
       - (rm /tmp/unit_coverage.out || echo "Deleted Old files")
