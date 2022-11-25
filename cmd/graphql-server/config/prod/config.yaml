@@ -1,0 +1,7 @@
+server:
+  cors:
+    allowed_origins:
+      - localhost:8080
+db:
+  postgres:
+    url: postgres://test:test@localhost:5435/notesdb
