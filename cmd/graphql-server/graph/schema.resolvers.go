@@ -5,6 +5,7 @@ package graph
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/shanmukhsista/go-graphql-starter/cmd/graphql-server/graph/generated"
 	"github.com/shanmukhsista/go-graphql-starter/pkg/model"
@@ -13,6 +14,11 @@ import (
 // CreateNewNote is the resolver for the createNewNote field.
 func (r *mutationResolver) CreateNewNote(ctx context.Context, input model.NewNoteInput) (*model.Note, error) {
 	return r.notesService.SaveNewNote(ctx, input)
+}
+
+// DeleteNote is the resolver for the deleteNote field.
+func (r *mutationResolver) DeleteNote(ctx context.Context, id string) (string, error) {
+	panic(fmt.Errorf("not implemented: DeleteNote - deleteNote"))
 }
 
 // Notes is the resolver for the notes field.

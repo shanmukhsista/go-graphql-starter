@@ -3,6 +3,10 @@
 This starter allows you to quickly bootstrap a Golang app that leverages Graphql ( powered by gqlgen framework). This is 
 my opinionated way of writing a Graphql application quickly by cloning this template. 
 
+A detailed intro on this starter can be found here. 
+
+[https://medium.com/@shanmukhsista/i-created-a-golang-graphql-project-starter-to-build-high-performance-cloud-native-production-apis-41bb55c05f7](https://medium.com/@shanmukhsista/i-created-a-golang-graphql-project-starter-to-build-high-performance-cloud-native-production-apis-41bb55c05f7)
+
 ## Getting started 
 
 To Get started, get started, simply click on the `Use this template` on the top right section above the code listing.

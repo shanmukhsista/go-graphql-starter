@@ -7,8 +7,10 @@ go 1.19
 require (
 	github.com/99designs/gqlgen v0.17.20
 	github.com/google/wire v0.5.0
+	github.com/hashicorp/go-multierror v1.1.1
 	github.com/jackc/pgx/v5 v5.1.0
 	github.com/labstack/echo/v4 v4.9.1
+	github.com/lithammer/shortuuid/v4 v4.0.0
 	github.com/rs/zerolog v1.28.0
 	github.com/samber/lo v1.34.0
 	github.com/spf13/viper v1.14.0
@@ -23,16 +25,12 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
-	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/hasura/go-graphql-client v0.8.1 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20200714003250-2b9c44734f2b // indirect
 	github.com/jackc/puddle/v2 v2.1.2 // indirect
-	github.com/klauspost/compress v1.15.12 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
-	github.com/lithammer/shortuuid/v4 v4.0.0 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
@@ -62,5 +60,4 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	nhooyr.io/websocket v1.8.7 // indirect
 )
